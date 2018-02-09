@@ -13,9 +13,9 @@
 9. ~~map~~
 10. ~~memoize~~
 11. merkle
-12. middleware
+12. ~~middleware~~
 13. morse-code
-14. once
+14. ~~once~~
 15. ~~sort~~
 16. throttle
 17. throttle-promises
