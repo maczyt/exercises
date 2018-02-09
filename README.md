@@ -7,11 +7,11 @@
 3. ~~curry~~
 4. ~~debounce~~
 5. ~~flatten~~
-6. flatten-thunk
+6. ~~flatten-thunk~~
 7. invert-tree
 8. jasmine-async
-9. map
-10. memoize
+9. ~~map~~
+10. ~~memoize~~
 11. merkle
 12. middleware
 13. morse-code
