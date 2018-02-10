@@ -17,7 +17,7 @@
 13. morse-code
 14. ~~once~~
 15. ~~sort~~
-16. throttle
+16. ~~throttle~~
 17. throttle-promises
 18. update
 19. value

@@ -1,14 +1,18 @@
-var assert = require('assert');
-var sinon = require('sinon');
-var throttle = require('./');
+var assert = require("assert");
+var sinon = require("sinon");
+var throttle = require("./");
 
-describe('throttle', function() {
+describe("throttle", function() {
   var clock;
 
-  beforeEach(function () { clock = sinon.useFakeTimers(); });
-  afterEach(function () { clock.restore(); });
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+  });
+  afterEach(function() {
+    clock.restore();
+  });
 
-  it('executes right away', function() {
+  it("executes right away", function() {
     var passed = false;
     var throttled = throttle(function() {
       passed = true;
@@ -47,7 +51,7 @@ describe('throttle', function() {
     clock.tick(100);
   });
 
-  it('will execute every threshold ms', function(done) {
+  it("will execute every threshold ms", function(done) {
     var startTime = new Date();
     var calledTimes = [];
     var throttled = throttle(function() {
@@ -63,10 +67,9 @@ describe('throttle', function() {
       done();
     }, 59);
     clock.tick(100);
-
   });
 
-  it('gets called with context', function() {
+  it("gets called with context", function() {
     var ctx;
     var throttled = throttle(function() {
       ctx = this;
@@ -75,7 +78,7 @@ describe('throttle', function() {
     assert.equal(ctx, 22);
   });
 
-  it('gets called with arguments', function() {
+  it("gets called with arguments", function() {
     var args;
     var throttled = throttle(function() {
       args = [].slice.call(arguments);
@@ -84,7 +87,7 @@ describe('throttle', function() {
     assert.deepEqual(args, [22, 33, 44]);
   });
 
-  it('gets called with the later arguments', function(done) {
+  it("gets called with the later arguments", function(done) {
     var args;
     var throttled = throttle(function() {
       args = [].slice.call(arguments);
@@ -95,9 +98,7 @@ describe('throttle', function() {
     setTimeout(function() {
       assert.deepEqual(args, [33, 44, 55]);
       done();
-    }, 15)
+    }, 15);
     clock.tick(100);
   });
-
-
 });
