@@ -1,3 +1,8 @@
+/**
+ * 又是event loop的实现
+ * 关键： context的设置
+ * 需要设置context，所以不能使用箭头函数
+ */
 class Middleware {
   constructor() {
     this.$funcs = [];
