@@ -3,7 +3,7 @@
 ## Exericse
 
 1. ~~async~~
-2. binary-search
+2. ~~binary-search~~
 3. ~~curry~~
 4. ~~debounce~~
 5. ~~flatten~~
